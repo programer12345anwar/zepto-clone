@@ -1,4 +1,8 @@
 package com.central.zepto.central_api.enums;
 
-public class UserType {
+public enum UserType {
+    APPLICATION_ADMIN,
+    WAREHOUSE_ADMIN,
+    CUSTOMER,
+    DELIVERY_PARTNER
 }
