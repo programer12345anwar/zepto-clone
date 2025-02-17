@@ -1,4 +1,5 @@
 package com.db.zepto.db_api.model;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,15 +10,12 @@ import java.util.UUID;
 
 @Entity
 @Data
-public class Product {
+public class WareHouseProducts {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
-    String productName;
-    int productPrice;
-    String details;
-    String manufacturerEmail;
-    Double rating;
-    int weight;
-    int totalPurchase;
+    UUID wid;
+    UUID pid;
+    int discount;
+    int totalQuantity;
 }
