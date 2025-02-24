@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Adapter {
+    //this is Adapter class
 
     public AppUser mapUserRequestBodyToAppUser(RegisterUserDto user){
         AppUser appUser = AppUser.builder()
