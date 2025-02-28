@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.UUID;
 
 @Entity
- @Data
+@Data
 public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
