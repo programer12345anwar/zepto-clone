@@ -22,7 +22,11 @@ public class WareHouseProductController {
         return products;
     }
     @GetMapping("/{wid}")
-    public List<WareHouseProducts> getAllProducts(@PathVariable UUID wid) {
+    public List<WareHouseProducts> getAllProductsByWid(@PathVariable UUID wid) {
          return wareHouseProductRepository.findAllByWarehouseId(wid);
+    }
+    @GetMapping("/{wid}/{pid}")
+    public WareHouseProducts getProductByWidAndPid(@PathVariable UUID wid, @PathVariable UUID pid) {
+        return wareHouseProductRepository.getProductByWidPid(wid, pid);
     }
 }
