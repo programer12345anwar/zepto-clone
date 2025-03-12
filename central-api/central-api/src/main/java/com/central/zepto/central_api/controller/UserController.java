@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/central/user")
 public class UserController {
-
+    //in central api we don't have repository layer,we will directly communicate with the service layer and service layer will communicate with th db api's repository layer
     private UserService userService;
     @Autowired
     public UserController(UserService userService){
@@ -24,6 +24,5 @@ public class UserController {
         //call service layer to save the user
         AppUser response=userService.createUser(user);
         return response;
-
     }
 }

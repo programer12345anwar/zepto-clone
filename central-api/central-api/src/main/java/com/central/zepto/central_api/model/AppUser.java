@@ -1,10 +1,15 @@
 package com.central.zepto.central_api.model;
 
-import lombok.Data;
+import lombok.*;
 
 import java.util.UUID;
 
-@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class AppUser {
     UUID id;
     String name;
@@ -14,4 +19,5 @@ public class AppUser {
     String userType;
     int pincode;
     String status;
+    String address;
 }
