@@ -1,5 +1,6 @@
 package com.central.zepto.central_api.controller;
 
+import com.central.zepto.central_api.model.AppUser;
 import com.central.zepto.central_api.requestdto.RegisterUserDTO;
 import com.central.zepto.central_api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,10 @@ public class UserController {
         this.userService = userService;
     }
     @PostMapping("/register")
-    public ResponseEntity createUser(@RequestBody RegisterUserDTO user){
+    public AppUser createUser(@RequestBody RegisterUserDTO user){
         //call service layer to save the user
+        AppUser response=userService.createUser(user);
+        return response;
 
     }
 }

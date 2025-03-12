@@ -10,6 +10,6 @@ public class UserService {
     @Autowired
     private DatabaseAPI databaseAPI;
     public void createUser(RegisterUserDTO user) {
-
+        databaseAPI.callCreateUserEndpoint(user); // Calls the Database API to create a new user
     }
 }
