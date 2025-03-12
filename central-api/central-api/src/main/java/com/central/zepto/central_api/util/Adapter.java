@@ -5,7 +5,7 @@ import com.central.zepto.central_api.requestdto.RegisterUserDTO;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //it will create a new instance of this class
 public class Adapter {
     public AppUser mapUserRequestBodyToAppUser(RegisterUserDTO user){
         AppUser appUser=AppUser.builder()
