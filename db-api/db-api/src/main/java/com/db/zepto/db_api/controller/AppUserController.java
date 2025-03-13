@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/db")
+@RequestMapping("/api/v1/db/user")
 public class AppUserController {
     private AppUserRepository appUserRepository;
     @Autowired
@@ -29,6 +29,7 @@ public class AppUserController {
         return new ResponseEntity(user, HttpStatus.OK);
     }
 
+    @PostMapping("/save")
     public AppUser saveUser(@RequestBody AppUser user){
         appUserRepository.save(user);
         return user;
