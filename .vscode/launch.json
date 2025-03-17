@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CentralApiApplication",
+            "request": "launch",
+            "mainClass": "com.central.zepto.central_api.CentralApiApplication",
+            "projectName": "central-api"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DbApiApplication<db-api>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.db.zepto.db_api.DbApiApplication",
+            "projectName": "db-api",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
